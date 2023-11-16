@@ -1,0 +1,219 @@
+/* fazer a poha toda... o site funcionalidades e usando api do spotify */
+:root {
+    --default-green: #1db954;
+    --light-green: #1ed760;
+    --white: #fff;
+    --dark-transparent-gray: rgba(0, 0, 0, 0.6);
+    --light-transparent-gray: rgba(0, 0, 0, 0.4);
+    --black: #000;
+    --medium-gray: #919496;
+    --light-gray: #acb2b561;
+    --transition: all 300ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Utility classes */
+.btn-primary {
+    background-color: var(--default-green);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: .938rem 3.75rem;
+    border: none;
+    border-radius: 1.875rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+
+.logo {
+    width: auto;
+    height: 2.5rem;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* Nav */
+
+#navbar {
+    background-color: var(--dark-transparent-gray);
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.563rem 0;
+}
+
+#navbar .navbar-container ul {
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+}
+
+#navbar .navbar-container ul li {
+    padding: 0 1.25rem;
+    transition: var(--transition);
+}
+
+#navbar .navbar-container ul li:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+#navbar .navbar-container ul li:nth-child(3) {
+    border-left: 1px solid var(--white);
+}
+
+/* Banner */
+
+#showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./assets/img/showcase.webp') center center/cover;
+    background-color: var(--light-transparent-gray);
+    background-blend-mode: color;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#showcase h2 {
+    font-size: 5rem;
+}
+
+#showcase p {
+    margin: .938rem 0;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+
+#footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5rem 0;
+}
+
+#footer .footer-content {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#footer .footer-content .footer-menu {
+    margin: 0 2.5rem;
+    list-style: none;
+}
+
+#footer .footer-content .footer-menu .footer-menu_item {
+    margin: 1.563rem 0;
+    transition: var(--transition);
+}
+
+#footer .footer-content .footer-menu .footer-menu_item:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+#footer .footer-content .footer-menu p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--medium-gray);
+    font-size: .8rem;
+}
+
+.socials {
+    display: flex;
+    align-items: flex-start;
+}
+
+.socials i {
+    margin: 0 1.25rem;
+    font-size: 1.7rem;
+    padding: .5rem;
+    width: calc(1rem + 1.7rem);
+    height: calc(1rem + 1.7rem);
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.socials i:hover {
+    color: var(--default-green);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    font-weight: bold;
+    color: var(--medium-gray);
+    font-size: .75rem;
+    padding-top: 3.125rem;
+}
+
+.footer-info .footer-info_items {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.footer-info .footer-info_items .footer-info_item {
+    transition: var(--transition);
+}
+
+.footer-info .footer-info_items .footer-info_item:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+.footer-info .rights .country {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: .625rem;
+    gap: .625rem;
+}
+
+.footer-info .rights .country p {
+    transition: var(--transition);
+}
+
+.footer-info .rights .country p:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+.footer-info .rights .country .brazil-flag {
+    height: 1.25rem;
+    width: auto;
+    display: inline-block;
+}
